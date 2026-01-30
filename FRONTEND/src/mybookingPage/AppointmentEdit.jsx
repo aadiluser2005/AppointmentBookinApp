@@ -2,9 +2,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { Modal, Box, Button, TextField } from '@mui/material';
-import { useAppointment } from './AppointmentContext/AppointmentContext';
-import { useBooking } from '../Contexts/BookingContext';
-import EditSlots from './EditSlots';
+import { useAppointment } from './AppointmentContext/AppointmentContext.jsx';
+import { useBooking } from '../Contexts/BookingContext.jsx';
+import EditSlots from './EditSlots.jsx';
 import "./bookingPage.css";
 import axios from 'axios';
 import status from "http-status";

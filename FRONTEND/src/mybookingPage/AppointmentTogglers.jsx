@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useBooking } from '../Contexts/BookingContext'
+import { useBooking } from '../Contexts/BookingContext.jsx'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 

@@ -1,15 +1,15 @@
 import React from 'react'
-import Heading from './Heading'
-import DateSection from './DateSection'
-import TimeSlots from './TimeSlots'
-import PatientInfo from './PatientInfo'
-import Confirmation from './Confirmation'
+import Heading from './Heading.jsx'
+import DateSection from './DateSection.jsx'
+import TimeSlots from './TimeSlots.jsx'
+import PatientInfo from './PatientInfo.jsx'
+import Confirmation from './Confirmation.jsx'
 import "./bookingAppointment.css";
 import { useEffect } from 'react'
 import axios from 'axios'
-import { useBooking } from '../Contexts/BookingContext'
-import SnackBar from '../SnackBar/SnackBar'
-import LoadingSpinner from '../Loading/LoadingSpinner'
+import { useBooking } from '../Contexts/BookingContext.jsx'
+import SnackBar from '../SnackBar/SnackBar.jsx'
+import LoadingSpinner from '../Loading/LoadingSpinner.jsx'
 
 
 function BookingAppointment() {

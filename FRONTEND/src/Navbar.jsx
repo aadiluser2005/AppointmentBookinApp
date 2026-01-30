@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from "react-router-dom";
-import { useBooking } from './Contexts/BookingContext';
+import { useBooking } from './Contexts/BookingContext.jsx';
 import { useEffect } from 'react';
 import { useState } from 'react';
 

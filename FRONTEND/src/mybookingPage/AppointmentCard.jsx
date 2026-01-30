@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import {useNavigate} from "react-router-dom";
-import { useAppointment } from './AppointmentContext/AppointmentContext'
-import { useBooking } from '../Contexts/BookingContext';
+import { useAppointment } from './AppointmentContext/AppointmentContext.jsx'
+import { useBooking } from '../Contexts/BookingContext.jsx';
 import axios from 'axios';
 
 function AppointmentCard({patientName,appointmentDate,dateBooked,phoneNumber,slotNumber,appointmentId,isActive}) {

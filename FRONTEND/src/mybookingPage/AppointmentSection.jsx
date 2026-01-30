@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useBooking } from '../Contexts/BookingContext'
+import { useBooking } from '../Contexts/BookingContext.jsx'
  
 function AppointmentSection() {
 

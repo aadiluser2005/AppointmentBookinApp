@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal, Box, Button, TextField } from '@mui/material';
-import { useAppointment } from './AppointmentContext/AppointmentContext'
-import { useBooking } from '../Contexts/BookingContext';
+import { useAppointment } from './AppointmentContext/AppointmentContext.jsx'
+import { useBooking } from '../Contexts/BookingContext.jsx';
 import axios from 'axios';
 
 function AppointmentDelete() {

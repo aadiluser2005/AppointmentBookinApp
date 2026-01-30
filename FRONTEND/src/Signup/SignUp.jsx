@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Box, Typography, TextField, Button, Stack } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
-import { useBooking } from "../Contexts/BookingContext";
+import { useBooking } from "../Contexts/BookingContext.jsx";
 import { useNavigate } from "react-router-dom";
-import SnackBar from "../SnackBar/SnackBar";
+import SnackBar from "../SnackBar/SnackBar.jsx";
 import { useGoogleLogin } from "@react-oauth/google";
-import LoadingSpinner from "../Loading/LoadingSpinner";
+import LoadingSpinner from "../Loading/LoadingSpinner.jsx";
 
 export default function SignUp() {
   const [formState, setFormState] = useState(0);

@@ -1,14 +1,14 @@
 
-import BookingAppointment from "./bookappointmentPage/BookingAppointment";
-import LandingPage from "./landingPage/LandingPage";
-import MyBookingPage from "./mybookingPage/MyBookingPage";
-import Navbar from "./Navbar";
+import BookingAppointment from "./bookappointmentPage/BookingAppointment.jsx";
+import LandingPage from "./landingPage/LandingPage.jsx";
+import MyBookingPage from "./mybookingPage/MyBookingPage.jsx";
+import Navbar from "./Navbar.jsx";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
-import SignUp from "./Signup/SignUp";
+import SignUp from "./Signup/SignUp.jsx";
 import { BookingProvider } from "./Contexts/BookingContext";
-import Profile from "./userProfile/Profile";
+import Profile from "./userProfile/Profile.jsx";
 import {GoogleOAuthProvider} from "@react-oauth/google";
-import Error from "./Error/Error"
+import Error from "./Error/Error.jsx"
 
 
 export default function App() {

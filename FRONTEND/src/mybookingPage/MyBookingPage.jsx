@@ -1,20 +1,20 @@
 import React from 'react'
-import Heading from './Heading';
-import AppointmentTogglers from './AppointmentTogglers';
-import AppointmentSection from './AppointmentSection';
-import QuickActions from './QuickActions';
+import Heading from './Heading.jsx';
+import AppointmentTogglers from './AppointmentTogglers.jsx';
+import AppointmentSection from './AppointmentSection.jsx';
+import QuickActions from './QuickActions.jsx';
 import "./bookingPage.css";
 import { useEffect } from 'react';
 import axios from 'axios'
-import { useBooking } from '../Contexts/BookingContext'
+import { useBooking } from '../Contexts/BookingContext.jsx'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AppointmentCard from './AppointmentCard';
-import { AppointmentProvider } from './AppointmentContext/AppointmentContext';
-import AppointmentEdit from './AppointmentEdit';
-import SnackBar from '../SnackBar/SnackBar';
-import AppointmentDelete from './AppointmentDelete';
-import LoadingSpinner from '../Loading/LoadingSpinner';
+import AppointmentCard from './AppointmentCard.jsx';
+import { AppointmentProvider } from './AppointmentContext/AppointmentContext.jsx';
+import AppointmentEdit from './AppointmentEdit.jsx';
+import SnackBar from '../SnackBar/SnackBar.jsx';
+import AppointmentDelete from './AppointmentDelete.jsx';
+import LoadingSpinner from '../Loading/LoadingSpinner.jsx';
 
 
 

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import Hero from './Hero'
-import MetricsSection from './MetricsSection'
-import Testimonials from './Testimonials'
-import SessionRedirect from './sessionRedirect'
+import MetricsSection from './MetricsSection.jsx'
+import Testimonials from './Testimonials.jsx'
+import SessionRedirect from './SessionRedirect.jsx'
 import "./landingPage.css";
-import { useBooking } from '../Contexts/BookingContext'
-import SnackBar from '../SnackBar/SnackBar';
+import { useBooking } from '../Contexts/BookingContext.jsx'
+import SnackBar from '../SnackBar/SnackBar.jsx';
 
 
 function LandingPage() {
