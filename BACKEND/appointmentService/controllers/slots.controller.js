@@ -1,6 +1,6 @@
 import status from "http-status";
 import { slotModel } from "../models/slot.model.js";
-import { client } from "../RedisCache/client.js"; // shared folder remains at BACKEND/RedisCache
+import { client } from "../RedisCache/client.js"; 
 import { nanoid } from 'nanoid'
 
 export const slots = async (req, res) => {

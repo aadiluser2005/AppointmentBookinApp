@@ -15,7 +15,7 @@ import { adminRoutes } from "./routes/admin.route.js";
 app.use(cookieParser());
 
 app.use(cors({
-     origin: ["http://localhost:5173","http://localhost:5004"],
+   origin: [`${process.env.FRONTEND_URL}`,`${process.env.ADMIN_URL}`],
     credentials: true 
 }));
 
