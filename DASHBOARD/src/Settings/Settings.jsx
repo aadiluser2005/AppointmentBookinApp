@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from './Hero'
-import ProfileInfo from './ProfileInfo'
-import Security from './Security'
+import Hero from './Hero.jsx'
+import ProfileInfo from './ProfileInfo.jsx'
+import Security from './Security.jsx'
 import "./settings.css"
 
 function Settings() {

@@ -1,13 +1,13 @@
 import React from 'react'
-import Chart from './Chart'
-import Hero from './Hero'
+import Chart from './Chart.jsx'
+import Hero from './Hero.jsx'
 import "./dashboard.css"
-import { useDashBoardContext } from '../Context/DashBoardContext'
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx'
 import axios from "axios"
 import { useEffect } from 'react'
-import SnackBar from '../SnackBar/SnackBar'
+import SnackBar from '../SnackBar/SnackBar.jsx'
 import { useNavigate } from 'react-router-dom'
-import LoadingSpinner from '../Loading/LoadingSpinner'
+import LoadingSpinner from '../Loading/LoadingSpinner.jsx'
 
 function Dashboard() {
   const {setDashBoardInfo}=useDashBoardContext();

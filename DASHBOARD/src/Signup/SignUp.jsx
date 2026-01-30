@@ -3,8 +3,8 @@ import { Box, Typography, TextField, Button, Stack } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useDashBoardContext } from "../Context/DashBoardContext";
-import SnackBar from '../SnackBar/SnackBar'
+import { useDashBoardContext } from "../Context/DashBoardContext.jsx";
+import SnackBar from '../SnackBar/SnackBar.jsx'
 
 
 export default function SignUp() {

@@ -3,14 +3,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import Toolbar from '@mui/material/Toolbar';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
-import AppointmentCard from "./AppointmentCard";
+import AppointmentCard from "./AppointmentCard.jsx";
 // import { appointments } from "../sampleData";
-import { useDashBoardContext } from "../Context/DashBoardContext";
+import { useDashBoardContext } from "../Context/DashBoardContext.jsx";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoadingSpinner from "../Loading/LoadingSpinner";
+import LoadingSpinner from "../Loading/LoadingSpinner.jsx";
 
 function AppointmentsSection() {
     

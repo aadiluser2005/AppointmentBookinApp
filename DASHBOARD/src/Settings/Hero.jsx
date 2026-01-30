@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDashBoardContext } from '../Context/DashBoardContext'
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx'
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 

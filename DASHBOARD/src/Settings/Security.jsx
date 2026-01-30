@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import { useDashBoardContext } from '../Context/DashBoardContext';
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx';
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";

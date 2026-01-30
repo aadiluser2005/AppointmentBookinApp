@@ -3,11 +3,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import Toolbar from '@mui/material/Toolbar';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
-import UsersCard from "./UsersCard";
+import UsersCard from "./UsersCard.jsx";
 import axios from "axios";
-import { useDashBoardContext } from '../Context/DashBoardContext';
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx';
 import { useNavigate } from 'react-router-dom';
-import LoadingSpinner from '../Loading/LoadingSpinner';
+import LoadingSpinner from '../Loading/LoadingSpinner.jsx';
 
 
 function UsersSection() {

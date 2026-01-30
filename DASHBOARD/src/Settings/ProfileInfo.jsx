@@ -3,8 +3,8 @@ import axios from "axios"
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import SnackBar from "../SnackBar/SnackBar";
-import { useDashBoardContext } from "../Context/DashBoardContext";
+import SnackBar from "../SnackBar/SnackBar.jsx";
+import { useDashBoardContext } from "../Context/DashBoardContext.jsx";
 
 function ProfileInfo() {
 

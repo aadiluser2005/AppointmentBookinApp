@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal, Box, Button } from '@mui/material';
-import { useDashBoardContext } from '../Context/DashBoardContext';
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx';
 import axios from "axios";
 
 function DeactivateConfirm() {

@@ -1,12 +1,12 @@
 import './App.css'
-import Appointments from './Appointments/Appointments';
-import Dashboard from './Dashboard/Dashboard';
-import Navbar from './Navbar/Navbar'
+import Appointments from './Appointments/Appointments.jsx';
+import Dashboard from './Dashboard/Dashboard.jsx';
+import Navbar from './Navbar/Navbar.jsx'
 import {BrowserRouter,Routes,Route} from "react-router-dom";
-import Users from './Users/Users';
-import Settings from './Settings/Settings';
-import SignUp from './Signup/SignUp';
-import Error from './Error/Error';
+import Users from './Users/Users.jsx';
+import Settings from './Settings/Settings.jsx';
+import SignUp from './Signup/SignUp.jsx';
+import Error from './Error/Error.jsx';
 
 
 function App() {

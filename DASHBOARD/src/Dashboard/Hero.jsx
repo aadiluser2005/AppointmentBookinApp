@@ -1,6 +1,6 @@
 
-import InfoCards from './infoCards'
-import { useDashBoardContext } from '../Context/DashBoardContext'
+import InfoCards from './InfoCards.jsx'
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx'
 import { useEffect } from 'react';
 
 import {  useNavigate} from "react-router-dom";

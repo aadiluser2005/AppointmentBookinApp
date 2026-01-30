@@ -1,11 +1,11 @@
 import React from 'react'
 import "./users.css"
-import Hero from './Hero'
-import UsersSection from './UsersSection'
-import ActivateConfirm from './ActivateConfirm'
-import DeactivateConfirm from './DeactivateConfirm'
-import { useDashBoardContext } from '../Context/DashBoardContext'
-import SnackBar from '../SnackBar/SnackBar'
+import Hero from './Hero.jsx'
+import UsersSection from './UsersSection.jsx'
+import ActivateConfirm from './ActivateConfirm.jsx'
+import DeactivateConfirm from './DeactivateConfirm.jsx'
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx'
+import SnackBar from '../SnackBar/SnackBar.jsx'
 
 
 

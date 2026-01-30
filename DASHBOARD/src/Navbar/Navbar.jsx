@@ -2,7 +2,7 @@ import React from 'react'
 import {  NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css"
 import axios from "axios";
-import { useDashBoardContext } from '../Context/DashBoardContext';
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx';
 
 function Navbar() {
 

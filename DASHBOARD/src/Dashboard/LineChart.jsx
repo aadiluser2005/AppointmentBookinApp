@@ -1,6 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { useDashBoardContext } from '../Context/DashBoardContext';
+import { useDashBoardContext } from '../Context/DashBoardContext.jsx';
 import { useState,useEffect } from 'react';
 import {
   Chart as ChartJS,
