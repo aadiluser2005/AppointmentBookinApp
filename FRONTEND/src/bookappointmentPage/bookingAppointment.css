@@ -1,0 +1,326 @@
+.booking {
+  background: rgba(220, 241, 255, 0.267);
+  margin-top: 0 !important;
+  padding: 2rem 0rem;
+  min-height: 100vh;
+  height: 100% !important;
+  box-sizing: border-box;
+}
+
+.headingAppointment {
+  padding-top: 5rem;
+}
+.headingAppointment h1 {
+  font-weight: 700 !important;
+  color: rgba(40, 40, 40, 0.858);
+}
+
+/* DATE SECTION */
+.dateSection {
+  margin-top: 2rem !important;
+  background-color: white;
+  border: 2px solid rgb(224, 218, 218) !important;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.dateSection:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.dateSection i {
+  color: rgb(49, 115, 238);
+  font-size: 1.5rem !important;
+  font-weight: 300 !important;
+}
+.dateSection h4 {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-weight: 500;
+}
+
+.dateCards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.dateBox {
+  border: 1px solid black;
+  width: 11.75%;
+  padding: 1rem 1rem;
+  margin: 0.5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+.dateBox h5 {
+  margin-bottom: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.dateBox:hover {
+  border: 2px solid rgb(49, 115, 238);
+}
+
+.selectedDate {
+  background-color: rgb(80, 134, 235);
+  color: white !important;
+}
+
+/* APPOINTMENT slot section */
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.slotSection {
+  margin-top: 2rem !important;
+  background-color: white;
+  border: 2px solid rgb(224, 218, 218) !important;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  animation: slideUp 0.8s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slotSection:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.slotSection i {
+  color: rgb(49, 115, 238);
+  font-size: 1.5rem !important;
+  font-weight: 300 !important;
+}
+.slotSection h4 {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-weight: 500;
+}
+
+.slotCards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.slotBox {
+  border: 1px solid black;
+  text-align: center;
+  width: 10rem;
+  height: 6rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+}
+.slotBox h5 {
+  margin-top: 1rem;
+}
+.slotBox:hover {
+  border: 2px solid rgb(49, 115, 238);
+}
+
+.slotNumber {
+  background-color: rgba(216, 216, 216, 0.684);
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 1.75rem;
+  padding: 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.full {
+  background-color: rgba(235, 67, 67, 0.869);
+  color: white;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.selectedSlot {
+  background-color: rgb(80, 134, 235);
+  color: white !important;
+}
+.selectedSlot .slotNumber {
+  background-color: rgb(242, 247, 247);
+  color: black;
+}
+
+.patientDiv {
+  margin-top: 2rem !important;
+  background-color: white;
+  border: 2px solid rgb(224, 218, 218) !important;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.patientDiv:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.patientDiv i {
+  font-size: 1.2rem !important;
+}
+.patientDiv h4 {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-weight: 500;
+  padding-top: 0.25rem;
+}
+
+.patientDiv .row div {
+  width: 50%;
+}
+.patientDiv .row div > input {
+  width: 100%;
+  border-radius: 1rem !important;
+  background-color: rgba(250, 248, 248, 0.769);
+}
+
+.patientDiv .confirmButton{
+  background-color: rgb(49, 115, 238);
+  border: none;
+  color: white;
+  margin-left: 35% !important;
+  margin-top: 2rem !important;
+  border-radius: 1rem;
+  padding:0.3rem 4rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.patientDiv .confirmButton:hover{
+  transform: scale(1.12);
+}
+
+
+
+
+
+/* CONFIMRMATION SECTION */
+.confirmDiv {
+  margin-top: 2rem !important;
+  background-color: white;
+  border: 1px solid rgb(80, 134, 235) !important;
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.confirmDiv:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.confirmDiv i {
+  color: rgb(49, 115, 238);
+  font-size: 3.5rem;
+}
+
+.confirmDiv button i {
+  font-size: 1.5rem;
+  color: white;
+}
+.confirmDiv button {
+  font-size: 1.25rem;
+  background-color: rgb(49, 115, 238);
+  color: white !important;
+  border: none;
+  font-weight: 500;
+  padding: 0.5rem 3rem;
+  border-radius: 2rem;
+  margin-top: 0.5rem;
+}
+
+.confirmDiv button:hover{
+    opacity: 0.9;
+}
+
+@media (max-width: 578px) {
+  .headingAppointment {
+    margin-top: 7rem;
+  }
+
+  .sessionpara {
+    font-size: 1.5rem;
+    width: 100% !important;
+    padding-inline: 1.25rem !important;
+  }
+
+  .dateSection {
+    width: 90%;
+  }
+  .dateBox {
+  border: 1px solid black;
+  width: 40%;
+  padding: 1rem 1rem;
+  margin: 0.5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+
+  .slotSection {
+    width: 90%;
+  }
+
+  .slotCards {
+    display: flex;
+    justify-content: space-around !important;
+    flex-wrap: wrap !important;
+    flex-direction: row;
+  }
+
+  .slotBox{
+    width: 7.5rem !important;
+    height: 5.5rem;
+  }
+  .slotBox h5{
+    font-size: 1rem;
+  }
+
+  .slotNumber{
+    width: 85%;
+  }
+
+  .patientDiv{
+    width: 90%;
+  }
+  
+  .patientDiv .row div{
+    width: 100%;
+    margin-top: 1rem !important;
+    font-size: 1.10rem;
+  }
+
+  .patientDiv .confirmButton{
+  background-color: rgb(49, 115, 238);
+  border: none;
+  color: white;
+  margin-left: 15% !important;
+  margin-top: 2rem !important;
+  border-radius: 1rem;
+  padding:0.3rem 3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+  .confirmDiv{
+    margin-top: 2rem !important;
+    width: 90%;
+    padding-inline: 0;
+
+  }
+
+
+}

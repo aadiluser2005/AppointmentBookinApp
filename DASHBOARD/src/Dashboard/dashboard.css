@@ -1,0 +1,75 @@
+.hero{
+     padding-left: 1rem;
+      margin-top: 2rem;
+  
+}
+
+
+.greetingDiv p{
+    font-size: 1.25rem;
+}
+
+
+.infoDivs{
+    margin-top: 2rem;
+    /* background-color: red; */
+    display: flex;
+    /* justify-content: space-evenly; */
+   
+}
+
+.infoCard{
+    /* background-color: blue; */
+    padding: 1.75rem 1rem;
+    width: 22%;
+    height: fit-content;
+    border-radius: 1rem;
+    transition: all 0.4s ease-in-out;
+    margin-left: 1.5rem;
+}
+
+.infoCard:hover{
+   box-shadow: 0 5px 5px rgba(115, 114, 114, 0.2), 0 0 5px rgba(115, 114, 114, 0.2);
+}
+.infoUpper{
+    display: flex;
+    justify-content: space-between;
+    align-content: center ;
+}
+.infoUpper p{
+    font-size: 16px !important;
+    
+}
+.infoUpper i{
+    align-self: center;
+    font-size: 1.25rem;
+   
+}
+
+.infoLower h2{
+    font-weight: 500;
+}
+
+
+.chart{
+   
+    padding: 1rem;
+}
+
+.chartBox{
+  background-color: #F9FDFF;
+  margin-top: 1rem;
+  width: 100%;
+
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(181, 180, 180, 0.486);
+}
+
+
+.lineChart{
+    margin-left:1rem;
+    width: 95% !important;
+    height: 17rem !important;
+    margin-top: 1rem;
+}

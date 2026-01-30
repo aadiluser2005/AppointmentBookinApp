@@ -1,0 +1,77 @@
+.settingsMain{
+    margin-top: 2rem;
+    padding-inline: 1rem;
+}
+
+
+.settingsHero h2{
+     font-weight: 700;  
+}
+.settingsHero p{
+   font-size: 1.12rem;
+}
+
+.settingsHero{
+    display:flex ;
+    justify-content: space-between;
+}
+
+.settingsHero button{
+    margin-right: 2rem;
+     background-color: #0DA2E7;
+     border: none;
+     border-radius: 1.5rem;
+     padding: 0.5rem 1.5rem;
+     color: white;
+}
+
+.settingsHero button:hover{
+   
+     opacity: 0.9;
+}
+
+
+.profileSection{
+  border: 1px solid rgba(181, 180, 180, 0.486);
+  border-radius: 1rem;
+    padding:1rem 2rem;
+    margin-top: 1rem;
+}
+
+.upperDiv{
+    display: inline-block;
+}
+
+.lowerDiv{
+    
+    margin-top: 1rem
+}
+.adminInfo div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.adminInfo div input{
+    border-radius: 0.5rem;
+    padding-inline: 0.5rem;
+}
+
+.adminInfo div label{
+    font-weight: 500;
+}
+
+.saveBtn{
+    border: none;
+    margin-top: 1rem;
+    padding:0.5rem 1rem;
+    background-color: #0DA2E7;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.saveBtn:hover{
+    opacity: 0.9;
+}
+

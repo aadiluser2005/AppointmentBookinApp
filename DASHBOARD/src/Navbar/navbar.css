@@ -1,0 +1,65 @@
+.navbar{
+    background-color: rgb(231, 247, 255);
+    justify-content: flex-start;
+}
+.logo{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 4.5rem;
+    padding-inline: 1rem;
+    margin-right: 1rem;
+}
+.logo h4 ,p{
+    margin: 0;   
+}
+.logo h4{
+    color: rgb(13,162,231);
+}
+.navigateLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navigateLink a{
+    text-decoration: none;
+    color: rgba(98, 98, 98, 0.658);
+}
+
+.fetchBtn button{
+    margin-left: 2rem;
+    border: none !important;
+    background-color: rgb(13,162,231);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    color: white;
+}
+.fetchBtn button:hover{
+    opacity: 0.9;
+}
+
+.dashboardNav {
+    margin-inline-start: 0.25rem;
+    height: fit-content;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.navigateLink .dashboardNav:hover{
+    background-color: rgba(238, 237, 237, 0.74);
+    color: black;
+}
+
+.selected{
+    background-color: rgb(13,162,231) !important;
+    color:  white !important;
+}
+
+
+
+

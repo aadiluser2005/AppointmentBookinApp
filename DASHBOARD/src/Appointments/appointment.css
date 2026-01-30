@@ -1,0 +1,79 @@
+.appointmentMain{
+   
+    padding-inline: 1rem;
+}
+
+.hero h2{
+     font-weight: 700;  
+}
+.hero p{
+   font-size: 1.12rem;
+}
+
+.appointmentSection{
+   border: 1px solid rgba(181, 180, 180, 0.486);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.appointmentSection .upperDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.appointmentSection .upperDiv h3{
+    display: inline-block;
+  
+}
+
+.appointmentSection .upperDiv button{
+ margin-left: 1rem;
+  border: none;
+  padding:  0.5rem 1rem ;
+  border-radius: 1rem;
+   background-color: #0DA2E7;
+   color: white;
+}
+.appointmentSection .upperDiv button:hover{
+opacity: 0.9;
+}
+
+
+.appointmentCard{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+     border-bottom: 1px solid rgba(181, 180, 180, 0.486);
+
+}
+
+
+
+
+.appointmentCard:hover{
+    background-color: rgba(238, 237, 237, 0.491);
+}
+
+
+.confirmCapsule{
+    background-color: #0DA2E7;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    color: white;
+    width:fit-content;
+    margin: 0 auto;
+}
+
+.cancelCapsule{
+    background-color: #EF4343;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    color: white;
+    width:fit-content;
+      margin: 0 auto;
+}
+

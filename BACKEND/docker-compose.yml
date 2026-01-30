@@ -1,0 +1,64 @@
+
+
+services:
+  appointment:
+    build: ./appointmentService
+    env_file:
+      - ./appointmentService/.env
+    expose:
+      - "5001"
+    depends_on:
+      - redis
+      - rabbitmq
+
+  user:
+    build: ./userService
+    env_file:
+      - ./userService/.env
+    expose:
+      - "5002"
+    depends_on:
+      - redis
+      - rabbitmq
+
+  admin:
+    build: ./adminService
+    env_file:
+      - ./adminService/.env
+    expose:
+      - "5004"
+    depends_on:
+      - redis
+      - rabbitmq
+
+  notification:
+    build: ./notificationService  
+    env_file:
+      - ./notificationService/.env
+    expose:
+      - "5003"
+    depends_on:
+      - rabbitmq
+
+  gateway:
+    build: ./MainGateway
+    env_file:
+      - ./MainGateway/.env
+    ports:
+      - "5000:5000"
+    depends_on:
+      - appointment
+      - user
+      - admin
+      - notification
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"

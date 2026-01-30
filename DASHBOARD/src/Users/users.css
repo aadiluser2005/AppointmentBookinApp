@@ -1,0 +1,57 @@
+.usersMain{
+     padding-inline: 1rem;
+}
+
+.hero h2{
+     font-weight: 700;  
+}
+.hero p{
+   font-size: 1.12rem;
+}
+
+
+.userSection{
+   border: 1px solid rgba(181, 180, 180, 0.486);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.userSection .upperDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.userCard{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+     border-bottom: 1px solid rgba(181, 180, 180, 0.486);
+
+}
+
+
+
+.userCard:hover{
+    background-color: rgba(238, 237, 237, 0.491);
+}
+
+
+.activeCapsule{
+    background-color: #0DA2E7;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    color: white;
+    width:fit-content;
+}
+
+.inactiveCapsule{
+    background-color: #F1F5F9;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    color: black;
+    width:fit-content;
+}
