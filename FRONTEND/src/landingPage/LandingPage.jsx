@@ -3,9 +3,6 @@ import Hero from './Hero'
 import MetricsSection from './MetricsSection.jsx'
 import Testimonials from './Testimonials.jsx'
 import SessionRedirect from './SessionRedirect.jsx'
-import MetricsSection from './MetricsSection'
-import Testimonials from './Testimonials'
-import SessionRedirect from './SessionRedirect'
 import "./landingPage.css";
 import { useBooking } from '../Contexts/BookingContext.jsx'
 import SnackBar from '../SnackBar/SnackBar.jsx';
