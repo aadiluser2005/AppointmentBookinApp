@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Hero from './Hero'
 import MetricsSection from './metricsSection'
-import Testimonials from './testimonials'
+import Testimonials from './Testimonials'
 import SessionRedirect from './sessionRedirect'
 import "./landingPage.css";
 import { useBooking } from '../Contexts/BookingContext'
