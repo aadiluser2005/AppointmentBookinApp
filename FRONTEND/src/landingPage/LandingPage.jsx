@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Hero from './Hero'
-import MetricsSection from './metricsSection'
+import MetricsSection from './MetricsSection'
 import Testimonials from './Testimonials'
 import SessionRedirect from './sessionRedirect'
 import "./landingPage.css";
