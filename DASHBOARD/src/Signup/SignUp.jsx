@@ -34,7 +34,7 @@ export default function SignUp() {
 
   
 
-    const URL =`/api/v1/adminService/admin/login`;
+    const URL =`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/admin/login`;
     // console.log(URL);
     axios.post(URL,{
          pass: formData.pass,

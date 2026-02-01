@@ -16,7 +16,7 @@ function ActivateConfirm() {
   const handleActivate=()=>{
     setShowLoading(true);
               setAcitvateOpen(false);
-           axios.post("api/v1/adminService/users/activateUser",{email:userMail}).then((res)=>{
+           axios.post(`${import.meta.env.VITE_BACKEND_URL}api/v1/adminService/users/activateUser`,{email:userMail}).then((res)=>{
               setSnackBarOpen(true);
               setSnackBarMessage(res.data.message);
               setSnackBarType("success");

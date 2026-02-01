@@ -32,7 +32,7 @@ function Confirmation() {
 
        setShowLoading(true);
 
-       axios.post("/api/v1/appointmentService/appointment/book", {
+       axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/appointment/book`, {
        patientName:fullName,
        phoneNumber:phoneNumber,
        email:email,

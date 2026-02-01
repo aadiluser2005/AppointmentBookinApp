@@ -17,7 +17,7 @@ function AppointmentTogglers() {
   const handleUpcoming=async()=>{
        setPastSelected(false);
        setPast(false);
-         axios.get("/api/v1/appointmentService/appointment/upcomingAppointments",{withCredentials:true}).then((res)=>{
+         axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/appointment/upcomingAppointments`,{withCredentials:true}).then((res)=>{
        setAppointments(res.data);
        console.log(res.data);
     }).catch(e=>{
@@ -35,7 +35,7 @@ function AppointmentTogglers() {
     setPastSelected(true); 
    
 
-       axios.get("/api/v1/appointmentService/appointment/pastAppointments",{withCredentials:true}).then((res)=>{
+       axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/appointment/pastAppointments`,{withCredentials:true}).then((res)=>{
        setAppointments(res.data);
      
       // console.log(res.data);

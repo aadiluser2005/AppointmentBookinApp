@@ -16,7 +16,7 @@ function DateSection() {
     setDateSelected(true);
     setDate(date);
     //setSlotSelected(false);
-      const res=await axios.post("/api/v1/appointmentService/slots/getSlots",{
+      const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/slots/getSlots`,{
         date:date,
       });
 

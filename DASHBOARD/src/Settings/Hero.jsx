@@ -11,7 +11,7 @@ function Hero() {
 
   const handleLogout=()=>{
 
-     axios.post("/api/v1/adminService/admin/logout",{withCredentials:true})
+     axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/admin/logout`,{withCredentials:true})
      
     .then((res)=>{
        

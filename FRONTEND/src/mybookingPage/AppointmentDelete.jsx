@@ -13,7 +13,7 @@ function AppointmentDelete() {
          setAppointmentId(appointmentId);
          handleClose();
 
-    axios.post("/api/v1/appointmentService/appointment/delete",{
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/appointment/delete`,{
           appointmentId:appointmentId,
          },{withCredentials:true}).then((res)=>{
          setSnackbarType("success");

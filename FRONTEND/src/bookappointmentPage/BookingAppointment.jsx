@@ -19,7 +19,7 @@ function BookingAppointment() {
     window.scrollTo(0,0);
    
       async function fetchDates() {
-        const res=await axios.get("/api/v1/appointmentService/slots/getDates");
+        const res=await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/slots/getDates`);
         setDates(res.data);
        
        // console.log(res.data);

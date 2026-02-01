@@ -18,7 +18,7 @@ const handleEdit=async()=>{
   setCurrAppointmentDate(appointmentDate);
   setCurrSlotNumber(slotNumber);
   setEditOpen(true);
-  const res=await axios.post("/api/v1/appointmentService/slots/getSlots",{
+  const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/slots/getSlots`,{
         date:appointmentDate.slice(0,10),
       });
 

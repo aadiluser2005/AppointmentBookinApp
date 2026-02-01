@@ -13,7 +13,7 @@ function Navbar() {
  
   const fetchData=()=>{
     setShowLoading(true)
-        axios.get("api/v1/adminService/appointments/latestData").then((res)=>{
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v1/adminService/appointments/latestData`).then((res)=>{
           setSnackBarOpen(true);
           setSnackBarMessage(res.data.message);
           setSnackBarType("success");

@@ -30,7 +30,7 @@ function Security() {
         return 
       }
 
-      axios.post("/api/v1/adminService/admin/passChanges",{
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/admin/passChanges`,{
         oldPass:formData.oldPass,
         newPass:formData.newPass
       },{withCredentials:true}).then((res)=>{

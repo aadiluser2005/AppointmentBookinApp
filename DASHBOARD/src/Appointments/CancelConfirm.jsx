@@ -12,7 +12,7 @@ function CancelConfirm() {
 
    const handleCancel=async()=>{
       setShowLoading(true);
-    axios.post("/api/v1/adminService/appointments/cancelAppointment",{appointmentUniqueID:cancellingAppointmentID})
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/appointments/cancelAppointment`,{appointmentUniqueID:cancellingAppointmentID})
     .then((res)=>{
       setSnackBarOpen(true);
       setSnackBarMessage(res.data.message);

@@ -18,7 +18,7 @@ function ProfileInfo() {
      const handleSave=(e)=>{
       e.preventDefault();
 
-      axios.post("/api/v1/adminService/admin/profileChanges",{
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/admin/profileChanges`,{
         fullName:formData.fullName,
         email:formData.email,
         phone:formData.phone

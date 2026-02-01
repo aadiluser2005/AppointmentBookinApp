@@ -13,7 +13,7 @@ function Profile() {
     const handleLogOut=async()=>{
         localStorage.removeItem("sessionId");
         setUserLoggedIn(false);
-       axios.post("/api/v1/userService/user/logout",{withCredentials:true}).then((res)=>{
+       axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/logout`,{withCredentials:true}).then((res)=>{
         setSnackbarType("info");
          setError(res.data.message);
         setOpen(true);
@@ -34,7 +34,7 @@ function Profile() {
        useEffect(()=>{
          
            
-               axios.get("/api/v1/userService/user/userInfo",{withCredentials:true}).then((res)=>{
+               axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/userInfo`,{withCredentials:true}).then((res)=>{
                 setUserInfo(res.data.userInfo);
                }).catch(e=>{
                 setSnackbarType("error");

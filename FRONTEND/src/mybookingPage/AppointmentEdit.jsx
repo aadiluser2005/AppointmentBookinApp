@@ -40,7 +40,7 @@ function AppointmentEdit() {
     setShowLoading(true);
     console.log("Appointment ID : ",appointmentId," Phone number : ",currPhoneNumber," currName : ",currPatientName," currSlotNumber : ",currSlotNumber);
     // handle save logic here (API call or context update)
-     axios.post("/api/v1/appointmentService/appointment/update",{
+     axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/appointmentService/appointment/update`,{
         appointmentId:appointmentId,
         newSlotNumber:currSlotNumber,
         newPatientName:currPatientName,

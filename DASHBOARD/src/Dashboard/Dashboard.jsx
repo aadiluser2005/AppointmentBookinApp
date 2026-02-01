@@ -24,7 +24,7 @@ function Dashboard() {
 
   useEffect(()=>{
     setShowLoading(true)
-         axios.get("/api/v1/adminService/appointments/dashboardInfo").then((res)=>{
+         axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/appointments/dashboardInfo`).then((res)=>{
           console.log("dashboard print ==========",res.data);
     setDashBoardInfo(res.data.info);
       
