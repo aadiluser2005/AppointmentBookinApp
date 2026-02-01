@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     port: 5174, // 👈 your desired port
      proxy:{
-    '/api':'http://localhost:5000'
+    '/api':'http://gateway-alb-504767746.ap-south-1.elb.amazonaws.com'
      }
 
   },

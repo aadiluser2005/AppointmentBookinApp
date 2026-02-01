@@ -1,9 +1,9 @@
 import express from "express"
-const PORT=8003;
 import dotenv from "dotenv";
 import { notificationConsumer } from "./NotificationConsumer.js";
 dotenv.config();
 const app=express();
+const PORT=process.env.PORT||5003;
 
 
 

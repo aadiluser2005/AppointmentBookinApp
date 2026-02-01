@@ -14,6 +14,11 @@ const PORT=process.env.PORT||5000;
  }));
  
 
+ app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
+
  // Log every request
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl}`);

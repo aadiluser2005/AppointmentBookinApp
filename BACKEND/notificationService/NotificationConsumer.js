@@ -17,10 +17,12 @@ export const notificationConsumer = async () => {
      let connection;
   while (!connection) {
     try {
-      connection = await amqp.connect(process.env.RABBITMQ_URL );
+      connection = await amqp.connect(process.env.RABBITMQ_URL);
       console.log("📩 Connected to RabbitMQ");
+      console.log("from try block => ",process.env.RABBITMQ_URL)
     } catch (err) {
       console.log("❌ RabbitMQ not ready, retrying in 3s...");
+      console.log("from catch block",process.env.RABBITMQ_URL)
       await new Promise(res => setTimeout(res, 3000));
     }
   }
