@@ -80,8 +80,8 @@ export default function SignUp() {
 
     const URL =
       formState === 0
-        ? `/api/v1/userService/user/register`
-        : `/api/v1/userService/user/login`;
+        ? `${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/register`
+        : `${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/login`;
     // console.log(URL);
     axios
       .post(
@@ -169,9 +169,9 @@ export default function SignUp() {
       setError("Please provide valid details");
       return; // stop submission
     }
-
+    console.log(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/sendOTP`);
     axios
-      .post(`/api/v1/userService/user/sendOTP`, { email: formData.email })
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/sendOTP`, { email: formData.email })
       .then((res) => {
         //  console.log(res.status);
         if (res.status === 200) {
@@ -205,7 +205,7 @@ export default function SignUp() {
     }
 
     axios
-      .post(`/api/v1/userService/user/verifyOTP`, {
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/verifyOTP`, {
         email: formData.email,
         otp: formData.OTP,
       })
@@ -234,7 +234,7 @@ export default function SignUp() {
       if (authResult.code) {
         setShowLoading(true);
         axios
-          .get(`/api/v1/userService/user/auth/google?code=${authResult.code}`)
+          .get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/auth/google?code=${authResult.code}`)
           .then((res) => {
            // console.log(res.data);
 
