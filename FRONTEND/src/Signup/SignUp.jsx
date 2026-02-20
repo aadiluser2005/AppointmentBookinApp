@@ -229,42 +229,65 @@ export default function SignUp() {
       });
   };
 
-  const googleResponse = async (authResult) => {
-    try {
-      if (authResult.code) {
-        setShowLoading(true);
-        axios
-          .get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/auth/google?code=${authResult.code}`,{withCredentials:true})
-          .then((res) => {
-           // console.log(res.data);
+  // const googleResponse = async (authResult) => {
+  //   try {
+  //     if (authResult.code) {
+  //       setShowLoading(true);
 
-            setOpen(true);
-            setSnackbarType("success");
-            setError(res.data.message);
-            localStorage.setItem("sessionId", res.data.id);
-            // console.log(localStorage.getItem("sessionId"));
-            setUserLoggedIn(true);
-             setShowLoading(false);
-            navigate("/");
-          })
-          .catch((e) => {
-            setSnackbarType("error");
-            setOpen(true);
-            setError(e.response.data.message);
-             setShowLoading(false);
-          });
-        console.log(authResult.code);
-      }
-    } catch (error) {
-      console.log(`Error occurred ${authResult}`);
-    }
+  //       console.log(authResult.code);
+  //       axios
+  //         .get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/auth/google?code=${authResult.code}`,{withCredentials:true})
+  //         .then((res) => {
+  //          // console.log(res.data);
+
+  //           setOpen(true);
+  //           setSnackbarType("success");
+  //           setError(res.data.message);
+  //           localStorage.setItem("sessionId", res.data.id);
+  //           // console.log(localStorage.getItem("sessionId"));
+  //           setUserLoggedIn(true);
+  //            setShowLoading(false);
+  //           navigate("/");
+  //         })
+  //         .catch((e) => {
+  //           setSnackbarType("error");
+  //           setOpen(true);
+  //           setError(e.response.data.message);
+  //            setShowLoading(false);
+  //         });
+  //       console.log(authResult.code);
+  //     }
+  //   } catch (error) {
+  //     console.log(`Error occurred ${authResult}`);
+  //   }
+  // };
+
+
+  // const handleGoogleLogin = useGoogleLogin({
+  //   onSuccess: googleResponse,
+  //   onError: googleResponse,
+  //   flow: "auth",
+  // });
+
+
+
+  // frontend/components/GoogleLoginButton.jsx
+
+
+
+  const handleGoogleLogin = () => {
+    const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+    const redirectUri = import.meta.env.VITE_FRONTEND_URL + "/oauth/google/callback"; // must match Google Cloud redirect URI
+    const scope = "profile email";
+
+    // Redirect user to Google login
+    window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
   };
 
-  const handleGoogleLogin = useGoogleLogin({
-    onSuccess: googleResponse,
-    onError: googleResponse,
-    flow: "auth",
-  });
+ 
+
+
+
 
   return (
     showLoading?(<LoadingSpinner></LoadingSpinner>):

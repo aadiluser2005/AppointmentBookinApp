@@ -9,6 +9,7 @@ import { BookingProvider } from "./Contexts/BookingContext";
 import Profile from "./userProfile/Profile.jsx";
 import {GoogleOAuthProvider} from "@react-oauth/google";
 import Error from "./Error/Error.jsx"
+import GoogleCallback from "./Signup/GoogleCallback.jsx";
 
 
 export default function App() {
@@ -32,6 +33,7 @@ return (
       <Route path={"/booking"}  element={<MyBookingPage></MyBookingPage>}></Route>
       <Route path={"/login"} element={<GoogleWrapper></GoogleWrapper>}></Route>
     <Route path={"/profile"} element={<Profile></Profile>}></Route>
+     <Route path="/oauth/google/callback" element={<GoogleCallback></GoogleCallback>} />
      <Route path={"/*"} element={<Error></Error>}></Route>
   </Routes>
   </BrowserRouter>
