@@ -13,7 +13,7 @@ function Profile() {
     const handleLogOut=async()=>{
         localStorage.removeItem("sessionId");
         setUserLoggedIn(false);
-       axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/logout`,{withCredentials:true}).then((res)=>{
+       axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/logout`,{},{withCredentials:true}).then((res)=>{
         setSnackbarType("info");
          setError(res.data.message);
         setOpen(true);

@@ -234,7 +234,7 @@ export default function SignUp() {
       if (authResult.code) {
         setShowLoading(true);
         axios
-          .get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/auth/google?code=${authResult.code}`)
+          .get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/userService/user/auth/google?code=${authResult.code}`,{withCredentials:true})
           .then((res) => {
            // console.log(res.data);
 
