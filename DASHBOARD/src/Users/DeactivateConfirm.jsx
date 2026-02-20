@@ -15,7 +15,7 @@ function DeactivateConfirm() {
   const handlDeactivate=()=>{
     setShowLoading(true);
            setDeactivateOpen(false);
-       axios.post(`${import.meta.env.VITE_BACKEND_URL}api/v1/adminService/users/deactivateUser`,{email:userMail}).then((res)=>{
+       axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/users/deactivateUser`,{email:userMail},{withCredentials:true}).then((res)=>{
               setSnackBarOpen(true);
               setSnackBarMessage(res.data.message);
               setSnackBarType("success");

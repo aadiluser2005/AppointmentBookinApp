@@ -51,7 +51,7 @@ function ProfileInfo() {
 
   useEffect(()=>{
 
-  axios.get("/api/v1/adminService/admin/settingInfo")
+  axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/admin/settingInfo`,{withCredentials:true})
   .then((res)=>{
    // console.log(res);
     setFormData({fullName:res.data.message.fullName,

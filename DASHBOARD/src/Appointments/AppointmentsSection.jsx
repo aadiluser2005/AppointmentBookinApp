@@ -25,7 +25,7 @@ function AppointmentsSection() {
 
 
   useEffect(()=>{
-    axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v1/adminService/appointments/getAppointments`).then((res)=>{
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/appointments/getAppointments`,{withCredentials:true}).then((res)=>{
     //  console.log( "Response data ===============>",res.data.DBappointment);
         setAppointment(res.data.DBappointment);        
     }).catch(e=>{
@@ -39,7 +39,7 @@ function AppointmentsSection() {
 
   const showUpcoming=()=>{
     setShowLoading(true);
-      axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v1/adminService/appointments/getUpcomingAppointments`).then((res)=>{
+      axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/appointments/getUpcomingAppointments`,{withCredentials:true}).then((res)=>{
      // console.log( "Response data ===============>",res.data.message);
         setAppointment(res.data.message);   
         setShowLoading(false);     

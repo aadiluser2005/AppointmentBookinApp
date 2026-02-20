@@ -66,7 +66,7 @@ function UsersSection() {
 
   useEffect(()=>{
        
-      axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v1/adminService/users/allUser`).then((res)=>{
+      axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/adminService/users/allUser`,{withCredentials:true}).then((res)=>{
         setUsers(res.data.allUsers)
       }).catch(e=>{
          navigate("/login");
