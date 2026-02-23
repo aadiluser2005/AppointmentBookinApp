@@ -14,10 +14,20 @@ import { adminRoutes } from "./routes/admin.route.js";
 
 app.use(cookieParser());
 
-app.use(cors({
-   origin: [`${process.env.FRONTEND_URL}`,`${process.env.ADMIN_URL}`],
-    credentials: true 
-}));
+
+
+// const corsOptions = {
+//   origin: [
+//     process.env.FRONTEND_URL,
+//      process.env.FRONTEND_URL_PORT,
+//     process.env.ADMIN_URL
+//   ],
+//   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+//   credentials: true
+// };
+
+// app.use(cors(corsOptions));
 
 
 

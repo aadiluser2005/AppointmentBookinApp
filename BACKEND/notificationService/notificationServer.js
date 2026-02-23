@@ -28,5 +28,7 @@ notificationConsumer();
 
 
 app.listen(PORT,()=>{
+    console.log("APP PASSWORD:", process.env.GMAIL_APP_PASSWORD);
+
     console.log(`Notification Service is running on Port ${PORT}......`);
 })

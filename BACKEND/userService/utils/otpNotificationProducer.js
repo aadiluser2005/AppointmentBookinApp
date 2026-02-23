@@ -2,7 +2,7 @@ import amqp from "amqplib";
 
 
 
-export const addMessageToQueue= async(email)=> {
+export const addMessageToQueue= async(email,otp)=> {
      
 try {
     const connection=await amqp.connect(`${process.env.RABBITMQ_URL}`);
@@ -11,7 +11,7 @@ try {
      const exchange="notificationExchange";
      const routingKey ="mailService";
     
-    const otp=generateOTP();
+    
      
     const message={
      

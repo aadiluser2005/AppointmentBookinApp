@@ -10,6 +10,7 @@ import validator from "validator";
 import { generateOTP,addMessageToQueue } from "../utils/otpNotificationProducer.js";
 import { Oauth2Client } from "../utils/googleConfig.js";
 import axios from "axios";
+import { domains } from "googleapis/build/src/apis/domains/index.js";
 
 
 
@@ -35,9 +36,15 @@ export const googleAuthentication=async(req,res)=>{
   //   console.log(error);
   //   return res.status(500).json({message:"Error"});
   // }
+   console.log("recieved request");
+   // const {code}=req.query;
+
    
+
 try {
-    const {code}=req.query;
+     const {code}=req.query;
+
+     console.log("BACKEND RECIEVING THIS CODE =>",code);
      
     const googleRes=await Oauth2Client.getToken(code);
   
@@ -84,7 +91,7 @@ try {
         algorithm: "HS512",
         expiresIn: "1h",
       });
-     // console.log(token);
+      console.log(token);
       const isProduction = process.env.NODE_ENV === "production";
       res.cookie("jwt", token, {
         httpOnly: true,
@@ -103,13 +110,16 @@ try {
   if(error.code===11000){
     return res.status(500).json({message:"User already registerd with this mail try with your username and password"});
   }
-  res.status(500).json("Internal Server Error");
+  res.status(500).json({message:"Internal Server Error"});
  
 }
 
 
 
 }
+
+
+
 
 export const sendOTP = async (req, res) => {
   const { email } = req.body;
@@ -141,7 +151,7 @@ export const sendOTP = async (req, res) => {
    
 
     console.log("Generated OTP ",otp);
-    await addMessageToQueue(email);
+    await addMessageToQueue(email,otp);
   
      await client.set(OTPKey, otp);
      await client.expire(OTPKey,300);
@@ -279,33 +289,28 @@ export const login = async (req, res) => {
 };
 
 export const logout = async (req, res) => {
-  const token = req.cookies.jwt;
-  // console.log(token);
   try {
-    if (!token) {
-      return res
-        .status(status.NOT_FOUND)
-        .json({ message: "Please LogIn First" });
-    }
+    const isProduction = process.env.NODE_ENV === "production";
 
-    if (token) {
-      const isProduction = process.env.NODE_ENV === "production";
-      res.clearCookie("jwt", {
-        httpOnly: true,
-        secure: isProduction,
-        sameSite: isProduction ? "none" : "lax",
-        path: "/",
-      });
+    res.clearCookie("jwt", {
+      httpOnly: true,
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "lax",
+      path: "/",
+    });
 
-      res.status(status.OK).json({ message: "User logged out successfully" });
-      return;
-    }
+    return res.status(200).json({
+      message: "User logged out successfully",
+    });
+
   } catch (e) {
-    res
-      .status(status.INTERNAL_SERVER_ERROR)
-      .json({ message: "Internal server error occured" });
+    return res.status(500).json({
+      message: "Internal server error occurred",
+    });
   }
 };
+
+
 
 export const userInfo = async (req, res) => {
   const { userId } = req.user;
@@ -344,6 +349,8 @@ export const userInfo = async (req, res) => {
     res.status(500).json({message:"Cannot find  user details"});
   }
 };
+
+
 
 // export const test = async (req, res) => {
 //   const user = await userModel.find({ username: "aadil_user" });

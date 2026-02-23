@@ -3,11 +3,9 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import fs from "fs";
 
-if (fs.existsSync(".env.local")) {
-  dotenv.config({ path: ".env.local" });
-} else {
+
   dotenv.config(); // fallback to .env
-}
+
 
 
 
@@ -64,14 +62,13 @@ export const notificationConsumer = async () => {
 
 // ✅ Nodemailer configuration
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  service: "gmail",
   auth: {
-    user: "aadiluser2002@gmail.com",
-    pass: process.env.GMAIL_APP_PASSWORD, // Gmail App Password (not your real Gmail password)
+    user: process.env.EMAIL_USER || "aadiluser2002@gmail.com",
+    pass: process.env.GMAIL_APP_PASSWORD,
   },
 });
+
 
 function sendMail(to, subject, html) {
   return transporter.sendMail({

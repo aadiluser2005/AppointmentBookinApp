@@ -17,12 +17,20 @@ import { adminAppointmentRouter } from "./routes/admin.route.js";
 
 app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: [`${process.env.FRONTEND_URL}`,`${process.env.ADMIN_URL}`],
-    credentials: true,
-  })
-);
+// const corsOptions = {
+//   origin: [
+//     process.env.FRONTEND_URL,
+//      process.env.FRONTEND_URL_PORT,
+//     process.env.ADMIN_URL
+//   ],
+//   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+//   credentials: true
+// };
+
+// app.use(cors(corsOptions));
+
+
 
 
 // Log every request
@@ -44,6 +52,7 @@ app.use("/admin",adminAppointmentRouter);
 // connect DB then start server
 const start = async () => {
   try {
+    console.log(process.env.MONGO_URL);
     await mongoose.connect(process.env.MONGO_URL);
     await appointmentModel.syncIndexes();
     console.log("DB is connected");
